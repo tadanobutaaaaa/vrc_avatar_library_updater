@@ -1,8 +1,10 @@
 package main
 
 import (
-	"context"
 	"github.com/wailsapp/wails/v2/pkg/runtime"
+
+	"context"
+	"fmt"
 )
 
 // App struct
@@ -19,6 +21,15 @@ func NewApp() *App {
 // so we can call the runtime methods
 func (a *App) startup(ctx context.Context) {
 	a.ctx = ctx
-	DownloadAndReplace()
-	runtime.Quit(a.ctx)
+}
+
+func (a *App) domReady(ctx context.Context) {
+	if err := DownloadAndReplace(a); err != nil {
+		fmt.Println("Error: ", err)
+		runtime.EventsEmit(a.ctx, "error", err.Error())
+	}
+	if err := StartApp(a); err != nil {
+		fmt.Println("Error: ", err)
+		runtime.EventsEmit(a.ctx, "error", err.Error())
+	}
 }
