@@ -26,6 +26,8 @@ func main() {
 		},
 		BackgroundColour: &options.RGBA{R: 27, G: 38, B: 54, A: 255},
 		OnStartup:        app.startup,
+		OnDomReady: 	 app.domReady,
+		AlwaysOnTop: 	true, // 常に最前面に表示
 		DisableResize:    true, // フルスクリーンボタンを無効化
 		Windows: &windows.Options{
             CustomTheme: &windows.ThemeSettings{
