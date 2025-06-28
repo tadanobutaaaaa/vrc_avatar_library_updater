@@ -6,4 +6,4 @@ VRC-Avatar-Libraryアプリケーションの自動アップデート機能を�
 
 ※ この更新ツールを使用するには、VRC-Avatar-Libraryアプリの存在が必要です。
 
-詳細な機能説明や開発経緯については、[VRC-Avatar-Libraryメインリポジトリ](https://github.com/tadanobutaaaaa/VRC-Avatar-Library)をご覧ください。
+詳細な機能説明や開発経緯については、[メインリポジトリ](https://github.com/tadanobutaaaaa/VRC-Avatar-Library)をご覧ください。
