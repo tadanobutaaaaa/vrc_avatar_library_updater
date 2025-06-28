@@ -1,5 +1,4 @@
 # VRC-Avatar-Library-Updater
-<<<<<<< HEAD
 
 ✨ **概要**
 
